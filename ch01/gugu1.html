@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>gugu1</title>
+<script type="text/javascript">
+
+function enter(){
+	//F12(개발자 콘솔)
+	console.log(window.event.keyCode);
+	if(window.event.keyCode == 13){//13 : enter
+		gugu();
+	}
+}
+
+function gugu(){
+	var dan=document.getElementById("dan").value;
+	var str="";
+	for(var i=1; i<=9; i++){
+		str+=dan+" * "+i+" = "+dan*i+"<br>";
+	}
+	//innerHTML : 해당 태그에 HTML코드를 출력
+	document.getElementById("result").innerHTML = str;	
+	//innerText : 해당 태그에 HTML코드를 무시하고 텍스트를 그대로 출력
+}
+
+</script>
+<style type="text/css">
+
+#result{
+	background: aqua;
+	width: 150px;
+}
+
+</style>
+</head>
+<body>
+
+단을 입력! &nbsp;&nbsp;
+<input type="text" id="dan" value="2" size="5" onkeyup="enter()"><br>
+<input type="button" value="확인" onclick="gugu()">
+<div id="result">innerHTML영역</div>
+
+</body>
+</html>

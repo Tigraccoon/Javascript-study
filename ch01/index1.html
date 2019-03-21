@@ -1,0 +1,39 @@
+<!-- 192.168.0.235 -->
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>index1</title>
+<script type="text/javascript">
+
+function bo(){
+	alert("각오하십시오..큰일나셨습니다.");
+	alert("5");
+	alert("4");
+	alert("3");
+	alert("2");
+	alert("1");
+	alert("0");
+	go();
+}
+function go() {
+	for(i=1; i<5; i++){
+		document.write("<img style='width: 800px; height: 500px;' src='../images/c"+i+".jpg'>");
+		document.write("<img style='width: 800px; height: 500px;' src='../images/d"+i+".jpg'>");
+		document.write("<img style='width: 800px; height: 500px;' src='../images/h"+i+".jpg'>");
+	}
+	alert("각오하라고 했죠?");
+}
+
+</script>
+</head>
+<body style="display: block; margin-left: auto; text-align: center;">
+<br><br><br><br><br><br><br><br><br><br><br>
+
+<form>
+<button style="width: 200; height: 70; font-size: 30pt" onclick="bo()">눌러보십시오.</button>
+</form>
+
+</body>
+</html>

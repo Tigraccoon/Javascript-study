@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>func</title>
+<script type="text/javascript">
+
+function greeting2(){
+	var name = document.getElementById("name").value;
+	var position = document.getElementById("position").value;
+	var dept = document.getElementById("dept").value;
+	if(name==""){	//빈 값
+		alert("이름을 입력해라.");
+		document.getElementById("name").focus();	//입력 커서 위치 설정
+		return;		//함수 종료
+	}
+	if(position==""){
+		alert("직급을 입력해라!");
+		document.getElementById("position").focus();
+		return;
+	}
+	if(dept==""){
+		alert("부서를 입력해라!");
+		document.getElementById("dept").focus();
+		return;
+	}
+	var str = name+" "+position+" 반갑다!\r\n"+dept;
+	alert(str);
+	document.getElementById("form1").submit();
+}
+
+</script>
+</head>
+<body>
+
+<form action="func_reslut.jsp" method="post" id="form1">
+
+이름 : &nbsp;&nbsp;<input type="text" id="name" name="name" size="5"><br>
+직급 : &nbsp;&nbsp;<input type="text" id="position" name="position" size="5"><br>
+부서명 : &nbsp;&nbsp;<input type="text" id="dept" name="dept" size="5"><br>
+
+<button type="button" onclick="greeting2()">확인</button>
+</form>
+
+</body>
+</html>
