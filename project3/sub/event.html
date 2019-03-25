@@ -3,6 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <title>커스텀 피자</title>
+<script type="text/javascript">
+function end(){
+	alert("종료된 이벤트입니다!");
+}
+</script>
 <style type="text/css">
 body{background: #EBEBEB;}
 header {
@@ -68,7 +73,20 @@ position: absolute;
 top: 200px;
 }
 
+#eventimages{
+width: 600px;
+height: 200px;
+}
+#runningevent{
+opacity: 1;
+}
+#endevent{
+opacity: 0.7;
+}
 
+table, th, td{display: box; text-align: center; margin: auto; padding: 5px; vertical-align: middle; 
+}
+table{border-bottom: 2px solid black; margin-bottom: 30px;}
 footer{
 	bottom: 0%; text-align: center; display: block;
 	color: blue;
@@ -103,9 +121,34 @@ footer{
 <br><br><br><br><br><br><br><br><br><br>
 
 <article>
+<h1 style="font-size: 300%">이벤트</h1><br><br><br>
 
-
-
+<form action="event1.html" method="post">
+<table id="runningevent">
+	<tr>
+		<td><input type="image" src="../images/event1.jpg" id="eventimages"></td>
+	</tr>
+	<tr>
+		<th>커스텀 피자 인증샷 이벤트!</th>
+	</tr>
+	<tr>
+		<td>2019-02-01 ~ 2018-03-31</td>
+	</tr>
+</table>
+</form>
+<div>
+<table id="endevent">
+	<tr>
+		<td><input type="image" src="../images/event.jpg" onclick="end()" id="eventimages" ></td>
+	</tr>
+	<tr>
+		<th>커스텀 피자 오픈 기념 3000원 할인 이벤트!</th>
+	</tr>
+	<tr>
+		<td>2018-11-30 ~ 2019-01-31</td>
+	</tr>
+</table>
+</div>
 <br><br><br><br><br><br><br><br><br><br>
 
 </article>

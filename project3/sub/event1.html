@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>커스텀 피자 : 이벤트</title>
+<style type="text/css">
+body{background: #EBEBEB;}
+header {
+	height: 200px;	width: 100%;
+	position: fixed;
+	top: 0; left: 0%;
+	float: left;
+	background: #E63C18;
+	margin: 0px;
+	z-index: 500;
+}
+#logo{
+	display: block;
+	height: 150px;
+	left: 5%; top: 2%;
+	position: fixed;
+}
+ul{
+	list-style: none;
+	position: absolute;
+	float: left;
+	top: 0;
+	left: 15%;
+	width: 100%; height: 200px;	
+}
+li{
+	font-size: 300%;
+	position: static;
+	display: inline-block;
+	margin-left: 30px;
+	margin-top: 30px;
+	padding: 0;
+}
+a:link{
+	padding: 20px;
+	text-align: center;
+	text-decoration: none;
+	color: white;
+	font-weight: bold;
+}
+a:visited{
+	padding: 20px;
+	text-align: center;
+	text-decoration: none;
+	color: white;
+	font-weight: bold;
+}
+
+li:hover {
+	text-decoration: underline;
+}
+
+article{
+margin-left: auto;
+margin-right: auto;
+margin-bottom: 100px;
+display: block;
+text-align: center;
+left: 20%;
+width: 60%;
+background: white;
+position: absolute;
+top: 200px;
+padding-bottom: 800px;
+}
+
+form{
+	position: absolute;
+	display: block;
+}
+
+footer{
+	bottom: 0%; text-align: center; display: block;
+	color: blue;
+	position:fixed;border-top:1px solid #e9e9e9;
+	background: #E63C18;
+	width: 100%;
+	margin: 0px;
+	padding 0px;
+	clear: both;
+	z-index: 100;
+	height: 100px;
+}
+
+</style>
+</head>
+<body>
+
+<header>
+	<a href="../index.html"><img alt="로고" src="../images/logo.png" id="logo"></a>
+	
+	<nav id="nav">
+		<ul>
+			<li><a href="pizza.html">&nbsp;피자&nbsp;</a></li>
+			<li><a href="side.html">&nbsp;사이드&nbsp;</a></li>
+			<li><a href="event.html" style="text-decoration: underline;">&nbsp;이벤트&nbsp;</a></li>
+			<li><a href="location.html">&nbsp;매장위치&nbsp;</a></li>
+			<li><a href="product.html">&nbsp;원산지&nbsp;</a></li>
+		</ul>
+	</nav>
+</header>
+
+<br><br><br><br><br><br><br><br><br><br>
+
+<article>
+<br><br><br><br>
+<img src="../images/event1.jpg"><br><br><br>
+<h1 style="font-size: 300%">커스텀 피자 인증샷 이벤트!</h1>
+<h2>2019-02-01 ~ 2018-03-31</h2><br><br><br>
+
+<form action="event1.jsp" target="_black" method="post">
+<input type="image" src="../images/event11.jpg" style="width: 100%;">
+</form>
+
+
+</article>
+
+
+<footer><h1>전화 주문 : 1588-9999</h1></footer>
+
+
+</body>
+</html>
