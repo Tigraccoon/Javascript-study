@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>number2</title>
+<script type="text/javascript">
+
+var num1 = "30.5px";	//String
+var num2 = 40;
+document.write("표현 가능한 가장 큰 수 : "+Number.MAX_VALUE,"<br>");
+document.write("표현 가능한 가장 작은 수 : "+Number.MIN_VALUE,"<br>");
+
+document.write("숫자가 아닌 경우 : "+Number.NaN,"<br>");	//Not a Number
+
+document.write(isNaN(num1)+"<br>");	//숫자가 아니면 true
+document.write(isNaN(num2)+"<br>");	//숫자면 false
+
+document.write(num1+num2+"<br>");
+document.write(parseInt(num1)+num2+"<br>");
+
+//자바스크립트에는 parseDouble이 없다. parseFloat까지만
+document.write(parseFloat(num1)+num2+"<br>");
+
+</script>
+</head>
+<body>
+
+
+
+</body>
+</html>

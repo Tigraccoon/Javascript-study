@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>date2</title>
+<script type="text/javascript">
+
+function checkDate(){
+	var s = document.getElementById("pdate").value;
+	document.write("구입한 날짜 : " + s + "<br>");
+	var pdate = new Date(s);	//사용자가 지정한 날짜, 시각
+	var today = new Date();		//시스템의 현재 날짜, 시각
+	//getTime() : 타임스탬프(time stamp, 밀리세컨드 단위)
+	//1970.1.1 ~ 현재까지의 밀리세컨드 단위
+	document.write("구입타임스탬프 : " + pdate.getTime()+" 밀리세컨드<br>");
+	document.write("현재타임스탬프 : "+today.getTime()+" 밀리세컨드<br>");
+	var diff = today.getTime() - pdate.getTime();
+	document.write("차이시간 : "+diff+" 밀리세컨드<br>");
+	document.write("일짜로 환산 : " + diff / (1000 * 60 * 60 * 24) +" 일<br>");	//밀리세컨드 / (ms*sec*min*hur)
+	var days=Math.floor(diff/(1000*60*60*24));	//버림
+	if(days > 30){
+		alert("본 상품은 30일 이내에만 교환 / 환불이 가능합니다.");
+	} else if(days < 0){
+		alert("날짜를 확인하세요!");
+	}else{
+		alert("교환 가능합니다.");
+	}
+	
+}
+
+</script>
+</head>
+<body>
+
+구입 날짜 :&nbsp;&nbsp;
+<input type="date" id="pdate">&nbsp;&nbsp;
+<button onclick="checkDate()">검사</button>
+
+</body>
+</html>

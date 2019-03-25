@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>math3</title>
+<script type="text/javascript">
+
+document.write("<h1>가위 바위 보 맞추기 게임</h1>");
+var t = prompt("가위, 바위, 보 중 선택해라!", "?");
+var tNum;
+switch(t){
+case "가위" : tNum=1; break;
+case "바위" : tNum=2; break;
+case "보" : tNum=3; break;
+default : alert("잘못 입력!"); location.reload();
+}
+//0.0~1.0 사이 난수 * 3 = 올림 함수를 통해 1~3까지의 난수만 발생
+var com = Math.ceil(Math.random()*3);	//컴퓨터 1 가위, 2 바위, 3 보
+
+document.write("<img src=../images/math_img_"+com+".png>");
+
+if(tNum == com){
+	alert("맞음!");
+} else{
+	alert("틀림!");
+}
+
+function regame(){
+	location.reload();
+}
+</script>
+</head>
+<body>
+<br>
+<button onclick="regame()">다시?</button>
+
+</body>
+</html>

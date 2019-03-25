@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>math1</title>
+<script type="text/javascript">
+
+function calc(type){
+	var x = document.getElementById("number1").value;
+	var y = "0";
+	
+	switch(type){
+	case 1 : y = Math.sin((x*Math.PI)/180.0);break;	//sin값
+	case 2 : y = Math.log(x); break;		//로그
+	case 3 : y = Math.sqrt(x); break;	//제곱근
+	case 4 : y = Math.abs(x); break; 	//절대값
+	}
+	document.getElementById("total").value=y;
+}
+
+</script>
+</head>
+<body>
+
+입력 : &nbsp;&nbsp; <input id="number1"><br>
+결과 : &nbsp;&nbsp; <input id="total"><br>
+<input type="button" value="SIN" onclick="calc(1)">&nbsp;
+<input type="button" value="LOG" onclick="calc(2)">&nbsp;
+<input type="button" value="SQRT" onclick="calc(3)">&nbsp;
+<input type="button" value="ABS" onclick="calc(4)">&nbsp;
+
+</body>
+</html>
