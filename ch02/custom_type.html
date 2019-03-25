@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>custom_type</title>
+<script type="text/javascript">
+
+//var 객체자료형 = {변수명 : 값, 변수명 : 값, ...};
+var myCar = {
+	maker : "BMW",
+	model : "i8",
+	year : 2018,
+	speed : 310,
+	
+	speedDown : function(){this.speed -=10; document.write("스피드다운..<br>");},
+	speedUp : function(){this.speed +=10; document.write("스피드업!<br>");}
+};
+
+document.write("타입 : "+typeof(myCar)+"<br>");
+myCar.speedUp();
+//맴버 호출 방법 : 참조변수["변수명"] or 참조변수.변수명
+document.write(myCar["maker"]+"<br>");
+document.write(myCar["model"]+"<br>");
+document.write(myCar["year"]+"<br>");
+document.write(myCar["speed"]+"<br><br>");
+
+myCar.speedDown();
+document.write(myCar.maker+"<br>");
+document.write(myCar.model+"<br>");
+document.write(myCar.year+"<br>");
+document.write(myCar.speed+"<br>");
+
+
+
+</script>
+
+</head>
+<body>
+
+
+
+</body>
+</html>

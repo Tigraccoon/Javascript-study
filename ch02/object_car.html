@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>object_car</title>
+</head>
+<body>
+
+<script type="text/javascript">
+
+function Car(model, speed, color){
+	this.model = model;	//자체 변수 생성
+	this.speed = speed;
+	this.color = color;
+	this.brake=function(){this.speed-=10;}	//자체 함수 생성
+	this.accel=function(){this.speed+=10;}
+}
+
+myCar = new Car("520d", 60, "red");
+document.write("모델: "+myCar.model+"<br>속도 : "+myCar.speed+"<br>색상 : "+myCar.color+"<br>");
+myCar.accel();
+document.write("모델: "+myCar.model+"<br>속도 : "+myCar.speed+"<br>색상 : "+myCar.color+"<br>");
+myCar.brake();
+document.write("모델: "+myCar.model+"<br>속도 : "+myCar.speed+"<br>색상 : "+myCar.color+"<br>");
+
+</script>
+
+</body>
+</html>
