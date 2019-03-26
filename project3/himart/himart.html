@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>하이마트</title>
+<style type="text/css">
+body{background: #E7E7E7;}
+select {
+	width: 70px;
+	height: 25px
+}
+
+div {
+	display: block;
+	margin: 0 auto;
+	padding: 10px;
+	border: 1px solid black;
+	left: 40%;
+	width: 20%;
+	text-align: center;
+	float: none;
+	background: white;
+}
+.left{float: left; display: inline;}
+.right{float:right; display: inline; text-align: right;}
+</style>
+</head>
+<body>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<div>
+		<form action="himart.jsp" method="post">
+		<h2>하이마트</h2><br> 
+			<b class="left">지점 :&nbsp;</b>
+			<select name="location" class="right">
+				<option value="강동">강동</option>
+				<option value="강서">강서</option>
+				<option value="강남">강남</option>
+				<option value="강북">강북</option>
+			</select><br><br> 
+			<b class="left">품명 :&nbsp;</b>
+			<select name="name" class="right">
+				<option value="청소기">청소기</option>
+				<option value="냉장고">냉장고</option>
+				<option value="전자레인지">전자레인지</option>
+				<option value="핸드폰">핸드폰</option>
+			</select><br><br> 
+			<b class="left">제품코드 :&nbsp;</b><input type="text" name="code" class="right"><br> <br> 
+			<b class="left">단가:&nbsp;</b><input type="number" name="price" class="right"><br> <br> 
+			<b class="left">수량 :&nbsp;</b><input type="number" name="amount" class="right"><br> <br> 
+			<input type="checkbox" name="chk" value="y">&nbsp;<b>면세품목</b><br> <br> 
+			<input type="submit" value="입력" style="background: #94DAFF; width: 250px; height: 70px; font-size: 2em;">
+		</form>
+	</div>
+
+</body>
+</html>

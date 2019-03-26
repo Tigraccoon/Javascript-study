@@ -45,6 +45,7 @@ body{text-align: center; margin: auto; font-size: 30px;}
 	EventDAO dao = new EventDAO();
 	
 	dao.upload(dto);
+	
 	out.write("파일명 : " + fileName + "<br><br>");
 	out.write("이름 : " + name + "<br><br>");
 	out.write("전화번호 : " + phoneNum + "<br><br>");

@@ -1,5 +1,0 @@
-D:\work_java\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\web02\project3/event 폴더 생성
-
-cos.jar, oracle8.jar를 D:\work_java\web02\WebContent\WEB-INF\lib에 저장
-
-src폴더를  D:\work_java\web02\sc에 저장
