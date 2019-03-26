@@ -1,4 +1,5 @@
-<%@ page import="event.eventDAO" %>
+<%@ page import="event.EventDAO" %>
+<%@ page import="event.EventDTO" %>
 <%@ page import="java.io.File" %>
 <%@ page import="com.oreilly.servlet.multipart.DefaultFileRenamePolicy" %>
 <%@ page import="com.oreilly.servlet.MultipartRequest" %>
@@ -39,11 +40,11 @@ body{text-align: center; margin: auto; font-size: 30px;}
 	String email = multipartRequest.getParameter("email");
 	String phoneNum = multipartRequest.getParameter("phoneNum");
 
-
 	
-	eventDAO dao = new eventDAO();
-	dao.upload(fileName, fileRealName, name, phoneNum, email);
-	out.write("파일명 : " + fileRealName + "<br><br>");
+	EventDTO dto = new EventDTO(fileName, fileRealName, name, email, phoneNum);
+	EventDAO dao = new EventDAO();
+	
+	dao.upload(dto);
 	out.write("파일명 : " + fileName + "<br><br>");
 	out.write("이름 : " + name + "<br><br>");
 	out.write("전화번호 : " + phoneNum + "<br><br>");

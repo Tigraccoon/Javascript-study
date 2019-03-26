@@ -7,7 +7,7 @@
 <title>커스텀 피자 : 인증샷 이벤트</title>
 <style type="text/css">
 body{margin: auto; display: block; text-align: center;}
-#button{width: 500px; height: 80px; background: #E63C18; color: #EBEBEB; font-weight: bold; font-size: xx-large;}
+#button{width: 350px; height: 80px; background: #E63C18; color: #EBEBEB; font-weight: bold; font-size: xx-large;}
 #button:hover {
 	background: #EBEBEB; color: #E63C18;
 }
@@ -70,7 +70,7 @@ function check(){
 	<input type="file" size="10" name="file" id="file"><br><br>
 	*파일명은 핸드폰 번호 ex)010-1234-5678.jpg<br>
 	쿠폰은 이메일과 문자를 통해 전송됩니다.<br><br><br>
-	<input type="button" size="10" value="이벤트 참여하기" id="button" onclick="check()"><br>
+	<input type="button" value="이벤트 참여하기" id="button" onclick="check()"><br>
 </form>
 </div>
 

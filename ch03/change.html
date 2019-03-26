@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>change</title>
+
+<script type="text/javascript">
+
+function get(){
+	
+	var val = document.getElementById("ex").innerHTML;
+	alert(val);
+}
+
+function set(v){
+	document.getElementById("ex").innerHtml = v;
+}
+
+function changeImage(){
+	var img = document.getElementById("image");
+	//이미지태그.src = "이미지 파일 이름"
+	img.src = "../images/tang2.jpg";
+	img.style.width = "250px";
+	img.style.height= "200px";
+}
+
+function changeStyle(){
+	var ex = document.getElementById("ex");
+	ex.style.color = "red";
+	ex.style.backgroundColor = "yellow";
+	ex.style.fontSize = "30px";
+	ex.style.fontFamily = "궁서체";
+	ex.style.fontStyle = "italic";
+}
+
+function show() {
+	document.getElementById("image").style.visibility = "visible";
+}
+
+function hide() {
+	document.getElementById("image").style.visibility = "hidden";
+	//document.getElementById("image").style.display = "none";
+	
+	//"none"자리배치조차 없어짐.
+}
+</script>
+
+</head>
+<body>
+
+<div id="ex">div영역</div>
+<a href="#" onclick="get()">div의 내용</a>
+<a href="#" onclick="set('변경되었습니다.')">div 변경</a>
+<br>
+<img alt="" src="../images/tang1.jpg" id="image"><br>
+<input type="button" value="이미지 변경" onclick="changeImage()">
+<input type="button" value="이미지 숨김" onclick="hide()">
+<input type="button" value="이미지 표시" onclick="show()">
+<br>
+<input type="button" value="글자 스타일 변경" onclick="changeStyle()">
+
+
+
+</body>
+</html>
