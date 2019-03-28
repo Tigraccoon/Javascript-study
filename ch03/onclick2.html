@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>onclick2</title>
+<script type="text/javascript">
+
+function change(img){
+/*  	var w;
+ 	w = window.open("", "", "width=1000, height=500, top=50, left=50");
+	w.document.body.style.backgroundImage = "url('"+img+"')"; */
+	//새로운 팝업창은 body태그가 없어서 안 바뀜.
+	document.body.style.backgroundImage = "url('"+img+"')";
+}
+
+</script>
+</head>
+<body>
+
+<h2>배경 이미지 바꾸기</h2>
+<input type="button" value="배경1" onclick="change('../images/bg3.jpg')">
+<input type="button" value="배경2" onclick="change('../images/bg4.jpg')">
+
+
+</body>
+</html>

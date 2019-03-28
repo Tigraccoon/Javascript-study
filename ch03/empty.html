@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>empty</title>
+<script type="text/javascript">
+
+function checkNotEmpty(field){
+	if(field.value==""){	//빈 값이면?
+		alert("필드가 비었음");
+		field.focus();	//입력 포커스
+		return false;	//호출한 곳에 flase리턴
+	}
+	var s=field.value;
+	if(s.length >= 2 && s.length <= 8){
+		alert("로그인 성공");
+		return true;	//폼을 제출
+	} else{
+		alert("이름은 2~8자 이내로 입력하시오.")
+		field.focus();
+		return false;	//폼 제출 안 함
+	}
+	return true;
+}
+
+</script>
+</head>
+<body>
+
+<form action="">
+
+이름 : &nbsp;&nbsp;<input type="text" id="user"><br>
+<input type="button" onclick="checkNotEmpty(document.getElementById('user'))" value="확인">
+
+
+</form>
+
+
+</body>
+</html>

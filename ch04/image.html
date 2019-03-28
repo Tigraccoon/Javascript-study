@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>image</title>
+</head>
+<body>
+
+<canvas id="myCanvas" width="1000px" height="1000px"></canvas>
+
+<script type="text/javascript">
+
+var canvas = document.getElementById("myCanvas");
+var context = canvas.getContext("2d");
+var image = new Image();	//이미지 객체 생성
+
+//이미지 경로
+image.src="../images/image.png";
+image.onload=function(){
+	//drawImage(이미지, x, y)
+	context.drawImage(image,0,0);
+}
+
+
+</script>
+
+</body>
+</html>

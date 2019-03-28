@@ -1,3 +1,6 @@
+
+<!-- http://192.168.0.235:8940/web02/project3/sub/event1.jsp -->
+
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>

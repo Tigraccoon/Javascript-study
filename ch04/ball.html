@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>ball</title>
+<script type="text/javascript">
+
+var context;
+var dx=5;	//x증가값
+var dy=5;	//y증가값
+var x=100;	//시작 x좌표
+var y=100;	//시작 y좌표
+
+function draw(){
+	var canvas = document.getElementById("myCanvas");
+	var context = canvas.getContext("2d");
+	
+	context.clearRect(0,0,1000,600);	//화면 지우기
+	context.beginPath();
+	context.fillStyle="red";
+	
+	context.arc(x, y, 30,0 , 2.0*Math.PI, true);
+	context.closePath();
+	context.fill();
+	
+	if(x < (0+10) || x > (1000-10)){	//좌우 벽처리, 가로 캔버스 사이즈만큼
+		dx = -dx;	//방향 전환
+	}
+	if(y < (0+10) || y > (600-10)){	//상하 벽처리, 세로 캔버스 사이즈만큼
+		dy = -dy;	//방향 전환
+	}
+	
+	x += dx;	//x좌표 이동
+	y += dy;	//y좌표 이동
+	
+}
+
+setInterval(draw,10);
+
+function change(){
+	dx = parseInt(document.getElementById("hSpeed").value);
+	dy = parseInt(document.getElementById("vSpeed").value);
+}
+
+</script>
+</head>
+<body>
+
+<canvas id="myCanvas" width="1000px" height="600px" style="border: 2px solid black;"></canvas>
+
+<form id="form1">
+x축 이동거리&nbsp;&nbsp;<input type="number" id="hSpeed" value="5" min="1" max="10"><br>
+y축 이동거리&nbsp;&nbsp;<input type="number" id="vSpeed" value="5" min="1" max="10"><br>
+<input type="button" onclick="change()" value="변경">
+</form>
+
+</body>
+</html>

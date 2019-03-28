@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>gra1</title>
+</head>
+<body>
+
+<canvas id="myCanvas" width="1000px" height="1000px"></canvas>
+
+<script type="text/javascript">
+
+var canvas = document.getElementById("myCanvas");
+var context = canvas.getContext("2d");
+//선형 그라디언트  효과 : createLinearGradient(x1, y1, x2, y2)
+var gradient = context.createLinearGradient(0,0,800,0);
+
+//시작 색상 범위 : 0.0 ~ 1.0
+gradient.addColorStop(0, "yellow");	//시작 색상
+gradient.addColorStop(0.3, "red");
+gradient.addColorStop(0.7, "green");
+gradient.addColorStop(1, "blue");
+context.fillStyle = gradient;	//그라데이션에 대한 페인트 설정
+context.fillRect(10,10,800,200);
+
+
+
+</script>
+
+</body>
+</html>

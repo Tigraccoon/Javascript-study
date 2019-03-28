@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>move</title>
+<script type="text/javascript">
+
+var w;
+function openWindow() {
+	//window.open(url, name, 옵션)
+	w = window.open("", "", "width=300, height=400, top=50, left=50");
+	w.document.write("<h2>팝업창 테스트</h2>");
+	w.document.write("<img src='../images/tomato.jpg'>");
+	w.moveTo(100, 200);	//절대좌표
+}
+
+function moveWindow() {
+	w.moveBy(100, 100);	//상대좌표(이전 좌표에서 x:100, y:100)
+	w.focus();	//팝업창에 포커스를 설정
+}
+
+function maxWindow() {
+	//consol.log("가로 : " + screen.availWidth + ", 세로 : " + screen.availHeight);
+	w.resizeTo(screen.availWidth, screen.availHeight);
+	w.focus();
+}
+
+</script>
+</head>
+<body>
+
+<!-- moveTo(x,y) 절대위치로 이동, moveBy(x,y) 상대위치로 이동 -->
+<input type="button" value="윈도우 생성" onclick="openWindow()">
+<input type="button" value="윈도우 이동" onclick="moveWindow()">
+<input type="button" value="전체 화면 보기" onclick="maxWindow()">
+
+</body>
+</html>

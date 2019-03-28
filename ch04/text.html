@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>text</title>
+</head>
+<body>
+
+<canvas id="myCanvas" width="1000px" height="1000px"></canvas>
+
+<script type="text/javascript">
+
+var canvas = document.getElementById("myCanvas");
+var context = canvas.getContext("2d");
+
+context.font ="italic 100px Arial";
+context.strokeStyle="blue";
+//(문자열, x, y)
+context.strokeText("Hello World", 20, 100);
+
+
+</script>
+
+</body>
+</html>

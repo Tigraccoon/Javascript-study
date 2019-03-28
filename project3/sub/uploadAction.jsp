@@ -1,3 +1,6 @@
+
+<!-- http://192.168.0.235:8940/web02/project3/sub/uploadAction.jsp -->
+
 <%@ page import="event.EventDAO" %>
 <%@ page import="event.EventDTO" %>
 <%@ page import="java.io.File" %>

@@ -1,3 +1,6 @@
+
+<!-- http://192.168.0.235:8940/web02/project3/himart/himart.jsp -->
+
 <%@ page import="himart.HimartDAO" %>
 <%@ page import="himart.HimartDTO" %>
 
@@ -61,7 +64,7 @@ dao.upload(dto);
 <script type="text/javascript">alert("서버 전송 완료");</script>
 
 <div>
-<h2>하이마트</h2><br> 
+<h2 style="text-align: center;">하이마트</h2><br> 
 
 	<b class="left">지점 :</b> <%=location %><br><br>
 	<b class="left">품명 :</b> <%=name %><br><br>

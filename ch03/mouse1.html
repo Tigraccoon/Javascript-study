@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>mouse1</title>
+
+<script type="text/javascript">
+
+function mouseIn(elem){
+	elem.style.border="2px solid red";
+	elem.style.fontSize="30px";
+}
+
+function mouseOut(elem){
+	elem.style.border="none";
+	elem.style.fontSize="12px";
+	elem.style.backgroundColor="blue";
+}
+</script>
+
+</head>
+<body>
+
+<div style="background: yellow; width: 200px;" onmouseover="mouseIn(this)" onmouseout="mouseOut(this)">
+마우스 이벤트
+
+</div>
+
+</body>
+</html>

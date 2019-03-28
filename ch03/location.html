@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>location</title>
+
+<script type="text/javascript">
+
+function replace() {
+	var w = window.open("http://google.com", "", "width=500, height=400");
+	location.href = "http://google.com";	//href="url"
+	
+}
+
+</script>
+
+</head>
+<body>
+
+<!-- 하이퍼링크로 이동 -->
+<a href="#" onclick="replace()">이동</a>
+
+<!-- 버튼으로 이동 -->
+<button onclick="replace()">이동</button>
+
+</body>
+</html>

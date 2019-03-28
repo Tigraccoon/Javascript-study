@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>rect</title>
+
+<script type="text/javascript">
+
+function test() {
+	var canvas = document.getElementById("myCanvas");
+	var context = canvas.getContext("2d");
+	
+	context.beginPath();		//경로초기화
+	context.rect(10,10,100,50);	//(x, y, 가로크기, 세로크기)
+	context.fillStyle="#00ff00";//색 설정
+	context.fill();				//색상 처리
+	
+	context.beginPath();
+	context.rect(50,50,100,100);
+	context.fillStyle="#ff0000";
+	context.fill();
+	
+}
+
+</script>
+
+</head>
+<body onload="test()">
+
+<canvas id="myCanvas" width="300" height="200" style="border: 1px solid red;"></canvas>
+
+</body>
+</html>
