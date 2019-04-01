@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>selector1</title>
+
+<!-- JQuery를 사용하기 위한 파일 경로 지정 -->
+<!-- 인터넷이 연결되어있으면 사이트에 직접 연결하는 CBN(Content Delivery Network)이란 방법도 있음 -->
+<!-- src='http://code.jquery.com/jquery-3.3.1.js' -->
+<!-- 파일 다운로드 후 연결과 CBN을 동시에 사용하면 충돌이 발생하니 한 가지만 사용 -->
+
+<script src="../include/jquery-3.3.1.min.js"></script>
+
+<script>
+
+/* $(document).ready(function(){
+	
+});	이게 정식 표현이나 아래처럼 축약해서 사용 */
+
+$(function(){//무명함수는 현재 문서가 로딩 완료되면 콜백함수가 자동으로 실행 (onload="함수" 느낌으로)
+	$("h2").click(function(){	//h2객체 클릭 시
+		$(this).hide();	//해당 객체가 숨겨짐
+	});
+});
+
+</script>
+
+</head>
+<body>
+
+<h2>첫 번째 h2</h2>
+<h2>두 번째 h2</h2>
+<h2>세 번째 h2</h2>
+
+</body>
+</html>

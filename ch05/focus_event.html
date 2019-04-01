@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>focus_event</title>
+<script src="../include/jquery-3.3.1.min.js"></script>
+<script type="text/javascript">
+
+$(function(){
+	//input태그가 포커스를 얻을 때
+	$("input").focus(function(){
+		//this는 현재 focus를 얻은 input태그를 의미
+		$(this).css("background-color", "yellow");
+		$(this).css("border", "3px dotted red");
+	});
+	
+	//input태그가 포커스를 잃을 때
+	$("input").blur(function(){
+		$(this).css("background-color", "white");
+		$(this).css("border", "3px dotted blue");
+		
+	});
+	
+});
+
+</script>
+</head>
+<body>
+
+아이디 :&nbsp;&nbsp;<input type="text" name="name"><br><br>
+패스웓 :&nbsp;&nbsp;<input type="text" name="pwd">
+
+</body>
+</html>
