@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>input_value</title>
+<script src="../include/jquery-3.3.1.min.js"></script>
+
+<script type="text/javascript">
+
+$(function(){
+	$("#button").click(function(){
+		var name = $("#name").val();	//id가 name인 태그에 입력된 값
+		alert(name);
+		name = prompt("이름을 입력하시오", "아무개");
+		$("#name").val(name);	//입력된 값을 name으로
+		
+		//attribute 속성
+		//태그.attr("속성이름"); 속성 읽기 함수
+		//태그.attr("속성이름", "변경값"); 속성 변경 함수
+		$("#img1").attr("src", "../images/apple.png");
+		$("#img1").attr({
+			"width" : "300px",
+			"height" : "300px"
+		});	//이미지 사이즈 변경
+		//$("img1").attr("width", "400px");
+		//$("img1").attr("width", "400px"); 을 위의 코드처럼 중괄호로 묶어 코드량을 줄일 수 있음.
+		
+		var img = $("#img1").attr("src");//img1의 src값을 읽음
+		alert(img);
+		
+	});
+});
+
+</script>
+</head>
+<body>
+
+이름: &nbsp;&nbsp;<input id="name" autofocus="autofocus" placeholder="이름을 입력!">
+<br>
+<img id="img1" src="../images/tomato.jpg">
+<br>
+<button id="button">확인</button>
+
+</body>
+</html>

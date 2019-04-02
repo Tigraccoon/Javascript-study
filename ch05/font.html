@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>font</title>
+<script src="../include/jquery-3.3.1.min.js"></script>
+
+<script type="text/javascript">
+
+var fontSize;	//전역변수
+$(init);	//페이지가 로딩된 후 init함수 자동 실행 *주의 : 함수이기 때문에 $(init());형식으로 사용 불가
+function init(){	//init 재정의
+	$("#fontControl li a").click(clickHandler);	//클릭 이벤트
+}
+
+function clickHandler(e){
+	e.preventDefault();	//기본 이벤트효과 제거
+	var whichClicked = $(this).attr("id");
+	
+	fontSize = parseInt($(".content").css("font-size"));
+	console.log("fontSize : " + fontSize);
+	
+	switch(whichClicked){
+	case "larger" : setFontSize(5); break;	//폰트 크기가 5씩 증가
+	case "smaller" : setFontSize(-5); break;//폰트 크기가 5씩 감소
+	}
+}
+
+function setFontSize(size){
+	var totalFontSize = fontSize + size;
+	$(".content").css({
+		"font-size" : totalFontSize + "px",
+		"font-weight" : "bold"
+	});
+}
+
+</script>
+
+<style type="text/css">
+.content{
+	font-size: 12px;
+}
+
+</style>
+
+</head>
+<body>
+
+<h2>글꼴 사이즈 조절</h2>
+<div id="div1">
+	<ul id="fontControl">
+		<li><a href="#" id="larger">크게</a></li>
+		<li><a href="#" id="smaller">작게</a></li>
+	</ul>
+</div>
+<div class="content">테스트문자열</div>
+</body>
+</html>

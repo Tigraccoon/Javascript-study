@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>myImage</title>
+<script src="../include/jquery-3.3.1.min.js"></script>
+
+<script type="text/javascript">
+
+$(function(){
+	var mainwidth = $("#main").css("width");
+	var mainheight = $("#main").css("height");
+	
+	$("#small a").click(function(e){	
+		e.preventDefault();	
+		
+		var imgPath = $(this).attr("href");
+		$(this).hide("fast");
+		$("#large img").hide("fast");
+		$("#large img").attr({
+			src : imgPath,
+			height : mainheight,
+			width : mainwidth
+		});
+		$("#large img").fadeIn("slow");
+		$(this).fadeIn("fast");
+	});
+	
+});
+
+</script>
+
+<style type="text/css">
+
+#wrap{
+	text-align: center;
+	width: 600px;
+}
+
+#large{
+	width: 400px;
+	height: 400px;
+}
+
+ul li{
+	list-style: none;	/* 스타일 제거 */
+	display: inline;	/* 인라인요소로(한 라인에 배치) */
+}
+
+ul img{
+	width: 100px;
+	height: 100px;
+}
+
+</style>
+
+</head>
+<body>
+
+<h2>Image change</h2>
+<div id="wrap">
+	<div id="large" style="z-index: 10">
+		<a href="#"><img src="../images/h1.jpg" id="main"> </a>
+	</div>
+	<div id="small" style="z-index: 100">
+		<ul>
+			<li><a href="../images/h1.jpg"><img src="../images/h1.jpg" border="0px" /> </a>
+			<li><a href="../images/h2.jpg"><img src="../images/h2.jpg" border="0px" /> </a>
+			<li><a href="../images/h3.jpg"><img src="../images/h3.jpg" border="0px" /> </a>
+			<li><a href="../images/h4.jpg"><img src="../images/h4.jpg" border="0px" /> </a>
+			<li><a href="../images/h5.jpg"><img src="../images/h5.jpg" border="0px" /> </a>
+		</ul>
+	</div>
+
+</div>
+
+</body>
+</html>
