@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>drag</title>
+<!-- url로 jquery를 가져오는 CBN방식 -->
+<script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+<script src="../include/jquery.magnify-1.0.2.js"></script>
+<script src="../include/jquery-ui.min.js"></script>
+
+
+<script type="text/javascript">
+
+$(function(){
+	$(".img").draggable({
+		opacity : "0.3"
+	});
+	$("#div1").droppable({
+		accept : ".img",
+		drop : function(){
+			$(this).text(" 가 장바구니에 담겼다.");
+		}
+	});
+});
+
+</script>
+
+<style type="text/css">
+#div1{
+	position: absolute;
+	left: 600px;
+	top: 50px;
+	width: 600px;
+	height: 600px;
+	border: 1px solid gray;
+	text-align: right;
+}
+
+
+</style>
+
+</head>
+<body>
+
+<h2>이미지 드래그</h2>
+<img src="../images/tomato.jpg" class="img"><br>
+<img src="../images/3-M.jpg" class="img"><br>
+<img src="../images/car1.jpg" class="img"><br>
+
+<div id="div1">이미지를 여기로 드래그</div>
+
+</body>
+</html>

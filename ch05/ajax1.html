@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>ajax1</title>
+<script src="../include/jquery-3.3.1.min.js"></script>
+
+<script type="text/javascript">
+
+$(function(){
+	$("#dan").keyup(function(){
+	//$("#button1").click(function(){
+		var dan = $("#dan").val();
+		
+		$.ajax({
+			type : "post",				//전송방식
+			url : "result1.jsp",		//action
+			data : "dan=" + dan,		//전송데이터
+			success : function(data){	//요청 성공시 처리, 콜백함수(처리 완료시 실행)
+				//div태그에 결과 출력
+				$("#result").html(data);
+			}
+			
+		});
+	});
+});
+
+</script>
+
+</head>
+<body>
+
+
+<h2>동기식(single thread) : 새로고침시 깜빡임</h2>
+<form action="result1.jsp">
+단을 입력 :&nbsp;&nbsp;<input type="number" name="dan">
+<input type="submit" value="확인">
+<br><br>
+
+<h2>비동기식(multi thread) : 새로고침시 안 깜빡임</h2>
+단을 입력 :&nbsp;&nbsp;<input type="number" id="dan">
+<input type="button" value="확인" id="button1">
+<br><br>
+<div id="result">결과 출력</div>
+</form>
+
+</body>
+</html>

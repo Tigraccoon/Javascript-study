@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>ajax2</title>
+<script src="../include/jquery-3.3.1.min.js"></script>
+
+<script type="text/javascript">
+
+function login(){
+	var userid = $("#userid").val();
+	var pwd = $("#pwd").val();
+	if (userid == ""){
+		alert("아이디 입력!");
+		$("#userid").focus();
+		return;
+	} else if (pwd == ""){
+		alert("패스웓 입력!");
+		$("#pwd").focus();
+		return;
+	}
+	
+	document.form1.submit();
+}
+
+$(function(){
+	$("#btnlogin").click(function(){
+		var userid = $("#userid").val();
+		var pwd = $("#pwd").val();
+		var param = "userid=" + userid + "&pwd=" + pwd;	//쿼리스트링(변수명=값&변수명=값)
+		//백그라운드에서 처리하기 때문에 부드러움
+		$.ajax({
+			type : "post",
+			url : "result2.jsp",
+			data : param,
+			success : function(data){	//콜백함수(서버에서 처리 완료 후)
+				$("#div1").html(data);	//화면 갱신 즉 현재 페이지에서 처리
+			}
+		});
+	});
+});
+
+</script>
+
+</head>
+<body>
+
+<h2>일반적인 동기적 방식</h2>
+<!-- <form action="result2.jsp" name="form1">
+아이디 :&nbsp;&nbsp;<input type="text" id="userid" name="userid" /><br><br>
+패스웓 :&nbsp;&nbsp;<input type="password" id="pwd" name="pwd" /><br><br>
+<input type="button" value="로긴" onclick="login()"/>
+</form>
+ -->
+
+<h2>ajax(비동기적 방식)</h2>	<!-- jsp로 보낼 땐 name으로 -->
+아이디 :&nbsp;&nbsp;<input type="text" id="userid" name="userid" /><br><br>
+패스웓 :&nbsp;&nbsp;<input type="password" id="pwd" name="pwd" /><br><br>
+<input type="button" value="로긴" id="btnlogin" />
+
+<div id="div1">결과?</div>
+
+</body>
+</html>
