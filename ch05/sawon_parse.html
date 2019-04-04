@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>sawon_parse</title>
+<script src="../include/jquery-3.3.1.min.js"></script>
+
+<script type="text/javascript">
+
+$(function(){
+	$.getJSON("sawon.json", function(data, textStatus){
+		$("#sawon").append("<tr><th>사번</th><th>이름</th><th>부서</th></tr>");
+		$.each(data, function(){
+			$("#sawon").append("<tr><td>"+ this.num +
+								"</td><td>" + this.name + 
+								"</td><td>" + this.dept + "</td></tr>");
+			
+		});
+	});
+});
+
+</script>
+
+</head>
+<body>
+
+<table id="sawon" border="1" style="width: 600px;">
+
+</table>
+
+</body>
+</html>

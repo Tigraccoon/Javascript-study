@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>json_parse</title>
+<script src="../include/jquery-3.3.1.min.js"></script>
+
+<script type="text/javascript">
+
+$(function(){
+	//getJSON("json데이터", 콜백함수);
+	//콜백함수 : function(json객채배열, 처리상태);
+	$.getJSON("student.json", function(data, textStatus){
+		console.log("data : " + data);
+		console.log("textStatus : " + textStatus);
+		$("#students").append("<tr><th>번호</th><th>이름</th><th>전화번호</th></tr>");
+		
+		//each() 객체배열의 모든 요소를 반복처리함
+		//향상된 for문인 for(개별값 : 집합)처럼
+		//$.each(집합, 개별값을 위한 함수);
+		$.each(data, function(){
+			$("#students").append("<tr><td>"+ this.num + 
+								"</td><td>" + this.name + 
+								"</td><td>" + this.tel + "</td></tr>");
+		});
+		
+	});
+});
+
+</script>
+
+</head>
+<body>
+
+<!-- json데이터를 파싱(일련의 문자열을 의미있는 토큰 단위로 분해)하여 테이블로 출력 -->
+<table id="students" style="width: 500px;" border="1">
+
+</table>
+
+</body>
+</html>

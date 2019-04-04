@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>json</title>
+<script src="../include/jquery-3.3.1.min.js"></script>
+
+<script type="text/javascript">
+
+$(function(){
+	//[]배열
+	//{'변수명' : '값', '변수명' : '값'} rorcp
+	//숫자형은 따옴표를 생략 가능
+	//JSON 배열, 한 줄로 처리해야 에러가 안 남?
+	var s = "[{'name':'김철수','age':21}, {'name':'박철호','age':25}, {'name':'송철민','age':29}]";
+	
+	console.log("배열로 들어온 s값은? : " + s);
+	
+	//eval() 함수를 통해 배열 스트링을 json 객체배열 형식으로 변환
+	//eval(코드) : string문장을 해석해 객체화해서 실행하는 함수
+	var students = eval(s);
+	console.log("배열변수 s의 type : " + typeof(s) + ", " + s);
+	console.log("eval(s)로 들어와 변환한 students의 type : " + typeof(students) + ", " + students);
+	
+	var name = "";
+	var age = "";
+	students[0].name = "lee";	//변경 가능
+	for(i=0; i<students.length; i++){
+		name += students[i].name + " ";
+		age += students[i].age + " ";
+	}
+	
+	$("#name").html(name);
+	$("#age").html(age);
+});
+
+</script>
+
+</head>
+<body>
+
+<h3>학생 명단</h3>
+<p style="background: yellow">
+	이름 :&nbsp;&nbsp;<span id="name"></span><br>
+	나이 :&nbsp;&nbsp;<span id="age"></span><br>
+</p>
+</body>
+</html>
