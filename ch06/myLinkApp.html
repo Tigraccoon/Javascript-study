@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>myLinkApp</title>
+<meta name="viewport" content="width=divice-width, initial-scale=1">
+
+<link rel="stylesheet" href="../include/jquery.mobile-1.4.5.min.css" />
+<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script src="../include/jquery.mobile-1.4.5.min.js"></script>
+
+</head>
+<body>
+
+<div data-role="page">
+	<div data-role="header">
+		<h1>사이트 리스트</h1>
+	</div>
+	<div data-role="content" style="float: left; display: inline-block; width: 45%">
+		<h3>포털 사이트</h3>
+		
+		<!-- data-role="listview" : 리스트 뷰 모드 -->
+		<!-- data-inset="true" : 좌우 여백 설정 -->
+		<!-- data-filter="true" : li 태그 검색 기능 -->
+		<ul data-role="listview" data-inset="true" data-filter="true" >
+			<li><a href="https://www.google.com/?gws_rd=ssl" data-role="button" data-icon="search">Google</a></li>
+			<li><a href="https://www.naver.com/" data-role="button" data-icon="search">Naver</a></li>
+			<li><a href="https://www.daum.net/" data-role="button" data-icon="search">Daum</a></li>
+		</ul>
+	</div>
+	
+	<div data-role="content" style="float: right; display: inline-block; width: 45%">
+		<h3>북마크 모음</h3>
+		
+		<!-- data-role="listview" : 리스트 뷰 모드 -->
+		<!-- data-inset="true" : 좌우 여백 설정 -->
+		<!-- data-filter="true" : li 태그 검색 기능 -->
+		<ul data-role="listview" data-inset="true" data-filter="true" >
+			<li><a href="https://github.com/" data-role="button" data-icon="star">GitHub</a></li>
+			<li><a href="https://papago.naver.com/" data-role="button" data-icon="star">PAPAGO</a></li>
+			<li><a href="https://www.w3schools.com/" data-role="button" data-icon="star">W3School</a></li>
+			<li><a href="https://htmlcolorcodes.com/" data-role="button" data-icon="star">HTML Color Code</a></li>
+			<li><a href="https://www.acmicpc.net/" data-role="button" data-icon="star">BACKJOON ONLINE JUDGE</a></li>
+		</ul>
+	</div>
+	
+	<div data-role="footer" style="bottom: 0%; clear: both;">
+		<h4>Thanks!</h4>
+	</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>ajax3</title>
+<script src="../include/jquery-3.3.1.min.js"></script>
+
+<script type="text/javascript">
+
+function check(){
+	var search = document.form1.search.value;
+	if(search == ""){
+		alert("검색어를 입력하시오.");
+		document.form1.search.focus();
+		return;
+	}
+
+	document.form1.submit();
+}
+
+$(function(){
+	$("#search").keyup(function(){
+		var search = $("#search").val();
+		if(search.length == 0){
+			$("#div1").css("visibility", "hidden");
+		}else{
+			$("#div1").css("visibility", "visible");
+			$.ajax({
+				url : "result3.jsp",
+				data : "search=" + search,
+				success : function(data){
+					$("#div1").html(data);
+				}
+			});
+		}
+	});
+	
+});
+
+</script>
+
+</head>
+<body>
+
+<h2>일반적인 동기적 방식</h2>
+<form action="result3.jsp" name="form1">
+	키워드를 입력하시오 :&nbsp;&nbsp;<input type="text" name="search" >
+	<input type="button" value="확인" onclick="check()" >
+</form>
+
+<h2>ajax 비동기적 방식</h2>
+키워드를 입력하시오 :&nbsp;&nbsp;<input type="text" id="search" >
+<div id="div1">검색 결과 출력 영역</div>
+
+</body>
+</html>
