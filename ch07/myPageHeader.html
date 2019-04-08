@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>myPageHeader</title>
+<meta name="viewport" content="width=divice-width, initial-scale=1">
+
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+</head>
+<body>
+
+<div data-role="page" id="page1">
+	<div data-role="header" >
+		<a href="#page1" data-role="button" data-icon="refresh">새로고침</a>
+		<h1>페이지1 header</h1>
+		<a href="#page2" class="ui-btn-right" data-role="button" data-icon="forward">다음 페이지</a>
+	</div>
+	
+	<div data-role="content">
+		<h1>페이지1</h1>
+	</div>
+
+	<div data-role="footer">
+		<h4>페이지2 footer</h4>
+	</div>
+
+</div>
+
+<div data-role="page" id="page2">
+	<div data-role="header" data-add-back-btn="true" data-back-btn-text="이전 페이지">
+		<h1>페이지2 header</h1>
+		<a href="#page3" class="ui-btn-right" data-role="button" data-icon="forward">다음 페이지</a>
+	</div>
+	
+	<div data-role="content">
+		<h1>페이지2</h1>
+	</div>
+
+	<div data-role="footer">
+		<h4>페이지2 footer</h4>
+	</div>
+
+</div>
+
+<div data-role="page" id="page3" >
+	<div data-role="header" data-add-back-btn="true" data-back-btn-text="이전 페이지">
+
+		<h1>페이지3 header</h1>
+		<a href="#page3" data-role="button" data-icon="refresh" class="ui-btn-right">새로고침</a>
+		
+	</div>
+	
+	<div data-role="content">
+<div data-role="collapsible-set" data-iconpos="right" >
+
+	<div data-role="collapsible" >
+	<h3>test 1</h3>
+	<p>I'm the collapsible set content for section A.</p>
+	</div>
+	
+	<div data-role="collapsible" >
+	<h3>test2 2</h3>
+	<p>I'm the collapsible set content for section B.</p>
+	</div>
+	
+</div>
+	</div>
+
+	<div data-role="footer">
+		<h4>페이지3 footer</h4>
+	</div>
+
+</div>
+
+</body>
+</html>

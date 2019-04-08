@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>app-link</title>
+<meta name="viewport" content="width=divice-width, initial-scale=1">
+
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+</head>
+<body>
+
+<div data-role="page" id="home">
+	<div data-role="header">
+		<h1>스마트 페이지 링크 처리법</h1>
+	</div>
+	
+	<div data-role="content">
+		<h2>외부 프로그램 링크</h2>
+		
+		<ul data-role="listview" data-inset="true">
+			<li><a href="mailto:abc@abc.com">이메일 링크</a></li>
+			<li><a href="tel:021234567" target="_blank">전화번호 링크</a></li>
+			<li><a href="sms:01012345678">SMS 문자 링크</a></li>
+			<li><a href="https://www.google.com/maps/place/37%C2%B032'07.8%22N+127%C2%B008'04.0%22E/@37.5355032,127.1322463,17z/data=!3m1!4b1!4m6!3m5!1s0x0:0x0!7e2!8m2!3d37.5354988!4d127.1344349">위성좌표 링크</a></li>
+			<li><a href="https://www.google.com/maps/place/%EC%84%9C%EC%9A%B8%ED%8A%B9%EB%B3%84%EC%8B%9C+%EA%B0%95%EB%8F%99%EA%B5%AC+%EC%B2%9C%ED%98%B83%EB%8F%99+448-46/@37.5361071,127.1303579,17z/data=!3m1!4b1!4m5!3m4!1s0x357caffdc788efb1:0x5743a7ce5ea5f475!8m2!3d37.5361029!4d127.1325466">주소 링크</a></li>
+			
+		</ul>
+		
+	</div>	
+	
+	<div data-role="footer" class="ui-bar" data-position="fixed">
+		<a href="index.html" data-icon="grid" rel="external">Index</a>
+	</div>
+
+</div>
+
+</body>
+</html>
