@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>page-footer</title>
+<meta name="viewport" content="width=divice-width, initial-scale=1">
+
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+</head>
+<body>
+
+<div data-role="page" id="page1">
+	<div data-role="header" data-add-back-btn="true" data-backbtn="false">
+		<h1>Header</h1>
+		<a href="#page2" class="ui-btn-right">페이지2</a>
+	</div>
+
+	<div data-role="contetn">
+		<p>content영역</p>
+		<h1>첫 번째 페이지</h1>
+	</div>
+	
+	<div data-role="footer" class="ui-bar">
+		<a href="#page1">페이지1</a>
+		<a href="#page2">페이지2</a>
+	</div>
+</div>
+
+<div data-role="page" id="page2">
+	<div data-role="header" data-add-back-btn="true" data-back-btn-text="이전으로">
+		<a href="#page2" class="ui-btn-right">페이지2</a>
+		<h1>Header</h1>
+	</div>
+
+	<div data-role="contetn">
+		<p>content영역</p>
+		<h1>두 번째 페이지</h1>
+	</div>
+	
+	<div data-role="footer" class="ui-bar">
+		<div data-role="controlgroup" data-type="horizontal">
+			<a href="#page1">페이지1</a>
+			<a href="#page2">페이지2</a>
+		</div>
+	</div>
+</div>
+
+
+</body>
+</html>

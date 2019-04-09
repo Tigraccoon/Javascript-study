@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>fullscreen</title>
+<meta name="viewport" content="width=divice-width, initial-scale=1">
+
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+</head>
+<body>
+<div data-role="page" id="page1">
+	<div data-role="header" data-fullscreen="true" data-position="fixed">
+		<h1>Header</h1>
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#page1" class="ui-btn-active">page1</a></li>
+				<li><a href="#page2">page2</a></li>
+				<li><a href="#page3">page3</a></li>
+				<li><a href="#page4">page4</a></li>
+			</ul>
+		</div>
+	</div>
+
+	<div data-role="content">
+		<p>content영역</p>
+	
+	</div>
+	
+	<div data-role="footer" class="ui-bar" data-fullscreen="true" data-position="fixed">
+	
+		<a href="#">bar~btn1</a>
+		<a href="#">bar~btn2</a>
+		<a href="#">bar~btn3</a>
+		<a href="#">bar~btn4</a>
+		
+	</div>
+
+</div>
+
+</body>
+</html>

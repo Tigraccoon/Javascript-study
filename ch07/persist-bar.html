@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>persist-bar</title>
+<meta name="viewport" content="width=divice-width, initial-scale=1">
+
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+</head>
+<body>
+
+<div data-role="page" id="page2">
+	<div data-role="header">
+		<h1>Header</h1>
+	</div>
+
+	<div data-role="contetn">
+		<p>content영역</p>
+		<h1>두 번째 페이지</h1>
+	
+	</div>
+	
+	<div data-role="footer" data-id="footerid1" data-position="fixed">
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#page2" class="ui-btn-active ui-state-persist">page2</a></li>
+				<li><a href="#page3">page3</a></li>
+			</ul>
+		</div>
+		<h4>페이지 꼬리말</h4>		
+	</div>
+
+</div>
+
+
+<div data-role="page" id="page3">
+  <div data-role="content">
+    <p>content영역</p>
+    <h1>세번째 페이지</h1>
+  </div>
+  <div data-role="footer" data-id="footerid1" data-position="fixed">
+    <div data-role="navbar">
+      <ul>
+        <li><a href="#page2" class="ui-btn-active ui-state-persist">page2</a>
+        <li><a href="#page3">page3</a></li>
+      </ul>
+    </div>
+    <h4>페이지꼬리말</h4>
+  </div>
+</div>
+</body>
+</html>

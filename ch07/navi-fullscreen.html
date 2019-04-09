@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<meta name="viewport" content="width=divice-width, initial-scale=1">
+
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+</head>
+<body>
+
+<div data-role="page" id="page1">
+	<div data-role="header" data-position="fixed">
+		<h1>페이지 제목</h1>
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#page1" class="ui-btn-active ui=state-persist">페이지1</a></li>
+				<li><a href="#page2" data-transition="slide">페이지2</a></li>
+				<li><a href="#page3" data-transition="slide">페이지3</a></li>
+			</ul>
+		</div>
+	</div>
+	
+	<div data-role="content">
+		<p>content area</p>
+		<h1>첫째 page</h1>
+	</div>
+	
+	<div data-role="footer" data-position="fixed" data-id="footerid1">
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#" data-icon="plus">추가</a></li>
+				<li><a href="#" data-icon="minus">삭제</a></li>
+				<li><a href="#" data-icon="check" class="ui-btn-active ui-state-persist">확인</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<div data-role="page" id="page2">
+	<div data-role="header" data-position="fixed">
+		<h1>페이지 제목</h1>
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#page1" data-direction="reverse" data-transition="slide">페이지1</a></li>
+				<li><a href="#page2" class="ui-btn-active ui-state-persist" >페이지2</a></li>
+				<li><a href="#page3" data-transition="slide">페이지3</a></li>
+			</ul>
+		</div>
+	</div>
+	
+	<div data-role="content">
+		<p>content area</p>
+		<h1>둘째 page</h1>
+	</div>
+	
+	<div data-role="footer" data-position="fixed" data-id="footerid1">
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#" data-icon="plus">추가</a></li>
+				<li><a href="#" data-icon="minus">삭제</a></li>
+				<li><a href="#" data-icon="check" class="ui-btn-active ui-state-persist">확인</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<div data-role="page" id="page3">
+	<div data-role="header" data-position="fixed" data-fullscreen="true">
+		<h1>페이지 제목</h1>
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#page1" data-transition="slide">페이지1</a></li>
+				<li><a href="#page2" data-direction="reverse" data-transition="slide">페이지2</a></li>
+				<li><a href="#page3" class="ui-btn-active ui-state-persist">페이지3</a></li>
+			</ul>
+		</div>
+	</div>
+	
+	<div data-role="content">
+		<p>content area</p>
+		<h1>둘째 page</h1>
+	</div>
+	
+	<div data-role="footer" data-position="fixed" data-id="footerid1">
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#" data-icon="plus">추가</a></li>
+				<li><a href="#" data-icon="minus">삭제</a></li>
+				<li><a href="#" data-icon="check" class="ui-btn-active ui-state-persist">확인</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+
+</body>
+</html>
