@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>grid-theme</title>
+<meta name="viewport" content="width=divice-width, initial-scale=1">
+
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+</head>
+<body>
+
+<div data-role="page" id="page1">
+	<div data-role="header">
+		<h1>header</h1>
+	</div>
+	
+	<div data-role="content">
+		<div class="ui-grid-d"><!-- 그리드 열 개수 : 5개 -->
+			<div class="ui-block-a">
+				<div class="ui-bar ui-bar-a">블록1</div>
+			</div>
+			
+			<div class="ui-block-b">
+				<div class="ui-bar ui-bar-b">블록2</div>
+			</div>
+			
+			<div class="ui-block-c">
+				<div class="ui-bar ui-bar-a">블록3</div>
+			</div>
+			
+			<div class="ui-block-d">
+				<div class="ui-bar ui-bar-b">블록4</div>
+			</div>
+			
+			<div class="ui-block-e">
+				<div class="ui-bar ui-bar-a">블록5</div>
+			</div>
+		</div>
+		
+		
+	</div>
+	
+	<div data-role="footer" data-position="fixed" class="ui-bar ui-grid-b">
+		<div class="ui-block-a">
+			<a href="#" data-role="button">버튼1</a>
+		</div>
+		<div class="ui-block-b">
+			<a href="#" data-role="button">버튼1</a>
+		</div>
+		<div class="ui-block-c">
+			<a href="#" data-role="button">버튼1</a>
+		</div>
+	</div>	
+</div>
+
+</body>
+</html>

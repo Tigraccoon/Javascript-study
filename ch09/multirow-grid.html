@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>multirow-grid</title>
+<meta name="viewport" content="width=divice-width, initial-scale=1">
+
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+</head>
+<body>
+
+<div data-role="page" id="page1">
+	<div data-role="header">
+		<h1>header</h1>
+	</div>
+	
+	<div data-role="content">
+		<p>2행 4열 그리드</p>
+		<div class="ui-grid-c">
+			<div class="ui-block-a"><div class="ui-bar ui-bar-a">1행1열</div></div>
+			<div class="ui-block-b"><div class="ui-bar ui-bar-b">1행2열</div></div>
+			<div class="ui-block-c"><div class="ui-bar ui-bar-a">1행3열</div></div>
+			<div class="ui-block-d"><div class="ui-bar ui-bar-b">1행4열</div></div>
+			<div class="ui-block-a"><div class="ui-bar ui-bar-a">2행1열</div></div>
+			<div class="ui-block-b"><div class="ui-bar ui-bar-b">2행3열</div></div>
+			<div class="ui-block-c"><div class="ui-bar ui-bar-a">2행4열</div></div>
+			<div class="ui-block-d"><div class="ui-bar ui-bar-b">2행5열</div></div>
+		</div>
+		
+		<p>2행3열 그리드</p>
+		<div class="ui-grid-b">
+			<div class="ui-block-a">
+				<div class="ui-bar ui-bar-a">
+					<img src="../images/listimg.png" width="95%" height="90%">
+				</div>
+			</div>
+			<div class="ui-block-b">
+				<div class="ui-bar ui-bar-b">
+					<img src="../images/listimg.png" width="95%" height="90%">
+				</div>
+			</div>
+			<div class="ui-block-c">
+				<div class="ui-bar ui-bar-a">
+					<img src="../images/listimg.png" width="95%" height="90%">
+				</div>
+			</div>
+			
+			<div class="ui-block-a">
+				<div class="ui-bar ui-bar-a">
+					<img src="../images/listimg.png" width="95%" height="90%">
+				</div>
+			</div>
+			<div class="ui-block-b">
+				<div class="ui-bar ui-bar-b">
+					<img src="../images/listimg.png" width="95%" height="90%">
+				</div>
+			</div>
+			<div class="ui-block-c">
+				<div class="ui-bar ui-bar-a">
+					<img src="../images/listimg.png" width="95%" height="90%">
+				</div>
+			</div>
+		</div>
+		
+	</div>
+	
+	<div data-role="footer" data-position="fixed">
+		<h4>footer</h4>
+	</div>
+</div>
+
+</body>
+</html>

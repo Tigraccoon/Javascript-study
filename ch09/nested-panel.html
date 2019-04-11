@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<meta name="viewport" content="width=divice-width, initial-scale=1">
+
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+
+<div data-role="page" id="page1">
+	<div data-role="header">
+		<h1>header</h1>
+	</div>
+	
+	<div data-role="content">
+		<div data-role="collapsible"><!-- h태그로 제목이 있어야함 -->
+			<h3>상위 접이식 패널 제목1</h3>
+			<p>팬널 내용1</p>
+			<div data-role="collapsible">
+				<h3>하위 접이식 패널 제목1</h3>
+				<p>하위 내용1</p>
+					<div data-role="collapsible">
+						<h3>하하위 접이식 패널 제목1</h3>
+						<p>하하위 내용1</p>
+					</div>
+					<div data-role="collapsible">
+						<h3>하하위 접이식 패널 제목2</h3>
+						<p>하하위 내용2</p>
+					</div>
+			</div>
+			<div data-role="collapsible">
+				<h3>하위 접이식 패널 제목2</h3>
+				<p>하위 내용2</p>
+			</div>
+		</div>
+		
+		<div data-role="collapsible">
+			<h3>접이식 패널 제목2</h3>
+			<h4>일반 제목</h4>
+			<p>팬널 내용2</p>
+		</div>
+		
+	</div>
+	
+	<div data-role="footer" data-position="fixed">
+		<h4>footer</h4>
+	</div>
+</div>
+
+
+</body>
+</html>

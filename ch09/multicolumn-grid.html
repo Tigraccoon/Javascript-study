@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>multicolumn-grid</title>
+<meta name="viewport" content="width=divice-width, initial-scale=1">
+
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+</head>
+<body>
+
+<div data-role="page" id="page1">
+	<div data-role="header">
+		<h1>header</h1>
+	</div>
+	
+	<div data-role="content">
+		<div class="ui-grid-a"><!-- 그리드 열 개수 2개로 설정 포함되는 그리드 블록 : ui-block-a~b -->
+			<div class="ui-block-a">블록1</div>
+			<div class="ui-block-b">블록2</div>
+		</div>
+	
+		<div class="ui-grid-b"><!-- 그리드 열 개수 3개로 설정 포함되는 그리드 블록 : ui-block-a~c -->
+			<div class="ui-block-a">블록1</div>
+			<div class="ui-block-b">블록2</div>
+			<div class="ui-block-c">블록3</div>
+		</div>
+		
+		<div class="ui-grid-c"><!-- 그리드 열 개수 4개로 설정 포함되는 그리드 블록 : ui-block-a~d -->
+			<div class="ui-block-a">블록1
+				<button>버튼1</button>
+			</div>
+			<div class="ui-block-b">블록2
+				<button>버튼2</button>
+				<button>버튼3</button>
+			</div>
+			<div class="ui-block-c">블록3
+				<button>버튼4</button>
+				<button>버튼5</button>
+				<button>버튼6</button>
+			</div>
+			<div class="ui-block-d">블록4
+				<button>버튼7</button>
+				<button>버튼8</button>
+				<button>버튼9</button>
+				<button>버튼10</button>
+			</div>
+		</div>
+		
+	</div>
+	
+	<div data-role="footer" data-position="fixed">
+		<h4>footer</h4>
+	</div>	
+</div>
+
+</body>
+</html>

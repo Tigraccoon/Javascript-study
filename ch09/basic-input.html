@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>basic-input</title>
+<meta name="viewport" content="width=divice-width, initial-scale=1">
+
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+</head>
+<body>
+
+<div data-role="page" id="page1">
+	<div data-role="header">
+		<h1>header</h1>
+	</div>
+	
+	<div data-role="content">
+		<label>(1)도시 이름
+			<input type="text" name="return" id="txt1">
+		</label>
+		<div data-role="fieldcontain" class="ui-disabled">
+			<label for="txt2">(2)도시이름</label>
+			<input type="text" name="return" id="txt2" data-role="none">
+		</div>
+		<div data-role="fieldcontain">
+			<label for="txt3">(3)도시이름</label>
+			<input type="text" name="return" id="txt3" value="서울">
+		
+		</div>
+		
+	</div>
+	
+	<div data-role="footer" data-position="fixed">
+		<h4>footer</h4>
+	</div>
+</div>
+
+</body>
+</html>
