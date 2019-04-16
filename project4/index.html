@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<meta name="viewport" content="width=divice-width, initial-scale=1">
+
+<link rel="stylesheet" href="css/swiper.min.css">
+<link rel="stylesheet" href="themes/custom.min.css" />
+<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<style type="text/css">
+.swiper-container {
+      width: 100%;
+      height: 80%;
+      left: 0px;
+}
+.swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+}
+li:hover {
+	text-decoration: underline;
+}
+.side_block > div{
+	display: inline-block;
+	margin: 20px;
+}
+
+.product th{
+	margin: 5px;
+	background-color: #FF9999;
+	border: 1px solid white;
+}
+
+.product td{
+	margin: 5px;
+	border: 1px solid #ff9999;
+}
+
+.product{
+	vertical-align: middle;
+	width: 100%;
+	border-collapse: collapse;
+	border-spacing: 0;
+	border: 1px solid #ff9999;
+}
+</style>
+</head>
+<body>
+
+<div data-role="page" id="#home" data-theme="a">
+	<div data-role="header" data-position="fixed" data-theme="a">
+		<a href="#home" data-role="button" data-icon="home" data-iconpos="notext">홈</a>
+		<h1>커스텀 피자</h1>
+		<a href="#sidebar" data-role="button" data-icon="bars" data-iconpos="notext" data-position="right">메뉴</a>
+		<div data-role="panel" id="sidebar" data-display="overlay" data-position="right" style="text-align: center;">
+			<h3>전체 메뉴</h3>
+			<ul data-role="listview" data-inset="true">
+				<li><a href="#pizza">&nbsp;피자 주문&nbsp;</a></li>
+				<li><a href="#side">&nbsp;사이드 메뉴&nbsp;</a></li>
+				<li><a href="#event">&nbsp;이벤트&nbsp;</a></li>
+				<li><a href="#location">&nbsp;매장위치&nbsp;</a></li>
+				<li><a href="#product">&nbsp;원산지&nbsp;</a></li>
+			</ul>
+			<a href="#home" data-role="button" data-rel="close" data-inline="true" 
+			data-icon="delete" data-iconpos="notext">닫기</a>
+		</div>
+	</div>
+	
+	<div data-role="content" style="text-align: center;" data-theme="a" >
+	
+		<h2>내맘대로 즐기는 맛있는 피자</h2>
+		<br>
+		<div class="swiper-container">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide"><img src="images/1.jpg" style="width: 100%; height: 50%;"></div>
+				<div class="swiper-slide"><img src="images/2.jpg" style="width: 100%; height: 50%;"></div>
+				<div class="swiper-slide"><img src="images/3.jpg" style="width: 100%; height: 50%;"></div>
+			</div>
+		<div class="swiper-pagination"></div>
+		<div class="swiper-button-next"></div>
+		<div class="swiper-button-prev"></div>
+		<script src="js/swiper.min.js"></script>
+		<script>
+    		var swiper = new Swiper('.swiper-container', {
+	      	slidesPerView: 1,
+      		spaceBetween: 30,
+      		loop: true,
+      		autoplay: {
+	          	delay: 2500,
+          		disableOnInteraction: false,
+        		},
+      		pagination: {
+		        el: '.swiper-pagination',
+        		clickable: true,
+      		},
+      		navigation: {
+		        nextEl: '.swiper-button-next',
+        		prevEl: '.swiper-button-prev',
+      		},
+    		});
+  		</script>
+		</div>
+	</div>
+	
+	<div data-role="footer" data-position="fixed" data-theme="a">
+		<h1>전화 주문 : 1588-9999</h1>
+	</div>
+</div><!-- home -->
+
+<div data-role="page" id="pizza" data-theme="a" data-fullscreen="true">
+	<div data-role="header" data-position="fixed" data-theme="a">
+		<a href="#home" data-role="button" data-icon="home" data-iconpos="notext" data-rel="back">홈</a>
+		<h1>피자 주문</h1>
+		<a href="#sidebar" data-role="button" data-icon="bars" data-iconpos="notext" data-position="right">메뉴</a>
+		<div data-role="panel" id="sidebar" data-display="overlay" data-position="right" style="text-align: center;">
+			<h3>전체 메뉴</h3>
+			<ul data-role="listview" data-inset="true">
+				<li><a href="#pizza" style="text-decoration: underline;">&nbsp;피자 주문&nbsp;</a></li>
+				<li><a href="#side">&nbsp;사이드 메뉴&nbsp;</a></li>
+				<li><a href="#event">&nbsp;이벤트&nbsp;</a></li>
+				<li><a href="#location">&nbsp;매장위치&nbsp;</a></li>
+				<li><a href="#product">&nbsp;원산지&nbsp;</a></li>
+			</ul>
+			<a href="#pizza" data-role="button" data-rel="close" data-inline="true" 
+			data-icon="delete" data-iconpos="notext">닫기</a>
+		</div>
+	</div>
+	
+	
+	<div data-role="content" style="text-align: center;" data-theme="a" >
+		<h1 style="font-size: 200%">내맘대로 즐기는 맛있는 피자</h1><br><br><br>
+
+		<img alt="메뉴" src="images/menu.jpg" style="width: 100%; height: 50%;">
+
+		<h3>토핑 5개 10000원</h3>
+		<h3>토핑 10개 13000원</h3>
+		<h3>토핑 15개 15000원</h3>
+		<h3>토핑 20개 17000원</h3>
+		<h3>토핑 30개 20000원</h3>
+	</div>
+
+	<div data-role="footer" data-position="fixed" data-theme="a">
+		<h1>전화 주문 : 1588-9999</h1>
+	</div>
+</div><!-- pizza -->
+
+<div data-role="page" id="side" data-theme="a" data-fullscreen="true">
+	<div data-role="header" data-position="fixed" data-theme="a">
+		<a href="#home" data-role="button" data-icon="home" data-iconpos="notext" data-rel="back">홈</a>
+		<h1>피자 주문</h1>
+		<a href="#sidebar" data-role="button" data-icon="bars" data-iconpos="notext" data-position="right">메뉴</a>
+		<div data-role="panel" id="sidebar" data-display="overlay" data-position="right" style="text-align: center;">
+			<h3>전체 메뉴</h3>
+			<ul data-role="listview" data-inset="true">
+				<li><a href="#pizza">&nbsp;피자 주문&nbsp;</a></li>
+				<li><a href="#side" style="text-decoration: underline;">&nbsp;사이드 메뉴&nbsp;</a></li>
+				<li><a href="#event">&nbsp;이벤트&nbsp;</a></li>
+				<li><a href="#location">&nbsp;매장위치&nbsp;</a></li>
+				<li><a href="#product">&nbsp;원산지&nbsp;</a></li>
+			</ul>
+			<a href="#side" data-role="button" data-rel="close" data-inline="true" 
+			data-icon="delete" data-iconpos="notext">닫기</a>
+		</div>
+	</div>
+	
+	<div data-role="content" style="text-align: center;" data-theme="a" >
+		<h1 style="font-size: 200%">음료&amp;사이드메뉴</h1><br><br><br>
+			<div class="side_block">
+				<div>
+					<table>
+						<tr>
+							<th><img alt="drink1" src="images/drink1.jpg"></th>
+						</tr>
+						<tr>
+							<th>팹시콜라</th>
+						</tr>
+						<tr>
+							<th>1000원</th>
+						</tr>
+					</table>
+				</div>
+
+				<div>
+					<table>
+						<tr>
+							<th><img alt="drink2" src="images/drink2.jpg"></th>
+						</tr>
+						<tr>
+							<th>스프라이트</th>
+						</tr>
+						<tr>
+							<th>1000원</th>
+						</tr>
+					</table>
+				</div>
+				<div>
+					<table>
+						<tr>
+							<th><img alt="side1" src="images/side1.jpg"></th>
+						</tr>
+						<tr>
+							<th>피클</th>
+						</tr>
+						<tr>
+							<th>300원</th>
+						</tr>
+					</table>
+				</div>
+				<div>
+					<table>
+						<tr>
+							<th><img alt="side2" src="images/side2.jpg"></th>
+						</tr>
+						<tr>
+							<th>스위트 칠리소스</th>
+						</tr>
+						<tr>
+							<th>100원</th>
+						</tr>
+					</table>
+				</div>
+				<div>
+					<table>
+						<tr>
+							<th><img alt="side3" src="images/side3.jpg"></th>
+						</tr>
+						<tr>
+							<th>허니갈릭소스</th>
+						</tr>
+						<tr>
+							<th>100원</th>
+						</tr>
+					</table>
+				</div>
+				<div>
+					<table>
+						<tr>
+							<th><img alt="side4" src="images/side4.jpg"></th>
+						</tr>
+						<tr>
+							<th>핫소스</th>
+						</tr>
+						<tr>
+							<th>100원</th>
+						</tr>
+					</table>
+				</div>
+				<div>
+					<table>
+						<tr>
+							<th><img alt="side5" src="images/side5.jpg"></th>
+						</tr>
+						<tr>
+							<th>컵샐러드</th>
+						</tr>
+						<tr>
+							<th>2000원</th>
+						</tr>
+					</table>
+				</div>
+				<div>
+					<table>
+						<tr>
+							<th><img alt="side6" src="images/side6.jpg"></th>
+						</tr>
+						<tr>
+							<th>감자튀김</th>
+						</tr>
+						<tr>
+							<th>2000원</th>
+						</tr>
+					</table>
+				</div>
+				<div>
+					<table>
+						<tr>
+							<th><img alt="side7" src="images/side7.jpg"></th>
+						</tr>
+						<tr>
+							<th>치킨텐더(4조각)</th>
+						</tr>
+						<tr>
+							<th>3000원</th>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+		
+	<div data-role="footer" data-position="fixed" data-theme="a">
+		<h1>전화 주문 : 1588-9999</h1>
+	</div>
+</div><!-- side -->
+
+<div data-role="page" id="location" data-theme="a" data-fullscreen="true">
+	<div data-role="header" data-position="fixed" data-theme="a">
+		<a href="#home" data-role="button" data-icon="home" data-iconpos="notext" data-rel="back">홈</a>
+		<h1>매장 위치</h1>
+		<a href="#sidebar" data-role="button" data-icon="bars" data-iconpos="notext" data-position="right">메뉴</a>
+		<div data-role="panel" id="sidebar" data-display="overlay" data-position="right" style="text-align: center;">
+			<h3>전체 메뉴</h3>
+			<ul data-role="listview" data-inset="true">
+				<li><a href="#pizza" >&nbsp;피자 주문&nbsp;</a></li>
+				<li><a href="#side">&nbsp;사이드 메뉴&nbsp;</a></li>
+				<li><a href="#event">&nbsp;이벤트&nbsp;</a></li>
+				<li><a href="#location" style="text-decoration: underline;">&nbsp;매장위치&nbsp;</a></li>
+				<li><a href="#product">&nbsp;원산지&nbsp;</a></li>
+			</ul>
+			<a href="#location" data-role="button" data-rel="close" data-inline="true" 
+			data-icon="delete" data-iconpos="notext">닫기</a>
+		</div>
+	</div>
+	
+	
+	<div data-role="content" style="text-align: center;" data-theme="a" >
+		<h1 style="font-size: 200%">매장위치</h1><br><br><br>
+
+		<iframe src="https://www.google.com/maps/embed/v1/search?q='강동미래능력개발교육원'&key=AIzaSyDwWq2JgZoIBcq4BUfzA2Nx7sMcKpg_PQQ" 
+		style="width: 100%; height: 500px"></iframe>
+	</div>
+
+	<div data-role="footer" data-position="fixed" data-theme="a">
+		<h1>전화 주문 : 1588-9999</h1>
+	</div>
+</div><!-- location -->
+
+<div data-role="page" id="product" data-theme="a" data-fullscreen="true">
+	<div data-role="header" data-position="fixed" data-theme="a">
+		<a href="#home" data-role="button" data-icon="home" data-iconpos="notext" data-rel="back">홈</a>
+		<h1>원산지</h1>
+		<a href="#sidebar" data-role="button" data-icon="bars" data-iconpos="notext" data-position="right">메뉴</a>
+		<div data-role="panel" id="sidebar" data-display="overlay" data-position="right" style="text-align: center;">
+			<h3>전체 메뉴</h3>
+			<ul data-role="listview" data-inset="true">
+				<li><a href="#pizza" >&nbsp;피자 주문&nbsp;</a></li>
+				<li><a href="#side">&nbsp;사이드 메뉴&nbsp;</a></li>
+				<li><a href="#event">&nbsp;이벤트&nbsp;</a></li>
+				<li><a href="#location">&nbsp;매장위치&nbsp;</a></li>
+				<li><a href="#product" style="text-decoration: underline;">&nbsp;원산지&nbsp;</a></li>
+			</ul>
+			<a href="#product" data-role="button" data-inline="true" data-icon="delete" data-iconpos="notext">닫기</a>
+		</div>
+	</div>
+
+
+		<div data-role="content" style="text-align: center;" data-theme="a">
+			<h1 style="font-size: 200%">원산지</h1>
+			<br>
+			<br>
+			<br>
+
+			<table class="product">
+				<tr>
+					<th>제품명</th>
+					<th>원산지</th>
+					<th>열량(kcal/1회분)</th>
+					<th>단백질(g/1회분)</th>
+					<th>포화지방(g/1회분)</th>
+					<th>나트륨(mg/1회분)</th>
+					<th>당류(g/1회분)</th>
+				</tr>
+				<tr>
+					<td>양파</td>
+					<td>국내산</td>
+					<td>25</td>
+					<td>0.5(1.33%)</td>
+					<td>0</td>
+					<td>7(0.35%)</td>
+					<td>1.92</td>
+				</tr>
+				<tr>
+					<td>피망</td>
+					<td>국내산</td>
+					<td>20</td>
+					<td>0.8(1.33%)</td>
+					<td>0</td>
+					<td>7.5(0.38$)</td>
+					<td>1.92</td>
+				</tr>
+				<tr>
+					<td>버섯</td>
+					<td>국내산</td>
+					<td>30</td>
+					<td>1.1</td>
+					<td>0</td>
+					<td>2</td>
+					<td>0</td>
+				</tr>
+				<tr>
+					<td>옥수수</td>
+					<td>국내산</td>
+					<td>100</td>
+					<td>3(1%)</td>
+					<td>0</td>
+					<td>180(8%)</td>
+					<td>6</td>
+				</tr>
+				<tr>
+					<td>올리브</td>
+					<td>국내산</td>
+					<td>130</td>
+					<td>0.5</td>
+					<td>2.3</td>
+					<td>0.7</td>
+					<td>0</td>
+				</tr>
+				<tr>
+					<td>파인애플</td>
+					<td>국내산</td>
+					<td>120</td>
+					<td>0</td>
+					<td>0</td>
+					<td>0</td>
+					<td>28</td>
+				</tr>
+				<tr>
+					<td>베이컨</td>
+					<td>국내산</td>
+					<td>287</td>
+					<td>17(28%)</td>
+					<td>7</td>
+					<td>680(34%)</td>
+					<td>0</td>
+				</tr>
+				<tr>
+					<td>페퍼로니</td>
+					<td>국내산</td>
+					<td>391</td>
+					<td>17(28%)</td>
+					<td>11.05(73%)</td>
+					<td>960(48%)</td>
+					<td>0.39</td>
+				</tr>
+				<tr>
+					<td>햄</td>
+					<td>국내산</td>
+					<td>115</td>
+					<td>18(33%)</td>
+					<td>3.7(25%)</td>
+					<td>900(45%)</td>
+					<td>0</td>
+				</tr>
+				<tr>
+					<td>통새우</td>
+					<td>국내산</td>
+					<td>59</td>
+					<td>14.2</td>
+					<td>0.2(0.5%)</td>
+					<td>595(25%)</td>
+					<td>0</td>
+				</tr>
+				<tr>
+					<td>불고기</td>
+					<td>국내산</td>
+					<td>253</td>
+					<td>3(1%)</td>
+					<td>5.34(36%)</td>
+					<td>680(34%)</td>
+					<td>2.51</td>
+				</tr>
+				<tr>
+					<td>모짜렐라치즈</td>
+					<td>국내산</td>
+					<td>276</td>
+					<td>17.35</td>
+					<td>13.13(18%)</td>
+					<td>731.39(9%)</td>
+					<td>1.17</td>
+				</tr>
+				<tr>
+					<td>체더치즈</td>
+					<td>국내산</td>
+					<td>383</td>
+					<td>0</td>
+					<td>15.6</td>
+					<td>607.83</td>
+					<td>0</td>
+				</tr>
+				<tr>
+					<td>닭고기</td>
+					<td>국내산</td>
+					<td>567</td>
+					<td>39</td>
+					<td>6</td>
+					<td>1500</td>
+					<td>1</td>
+				</tr>
+			</table>
+		</div>
+
+		<div data-role="footer" data-position="fixed" data-theme="a">
+		<h1>전화 주문 : 1588-9999</h1>
+	</div>
+</div><!--  -->
+
+</body>
+</html>
