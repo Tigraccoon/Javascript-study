@@ -38,38 +38,70 @@
 li:hover {
 	text-decoration: underline;
 }
-.side_block > div{
+.side_block div{
 	display: inline-block;
 	margin: 20px;
+	text-align: center;
 }
 
-.product th{
+.side_block img{display: block; width: 80%; height: auto;}
+.side_block img:hover {display: block; width: 100%; height: auto;}
+
+#product th{
 	margin: 5px;
 	background-color: #FF9999;
 	border: 1px solid white;
 }
 
-.product td{
+#product td{
 	margin: 5px;
 	border: 1px solid #ff9999;
 }
 
-.product{
+#product{
 	vertical-align: middle;
 	width: 100%;
 	border-collapse: collapse;
 	border-spacing: 0;
 	border: 1px solid #ff9999;
 }
+
+.endevent {
+	opacity: 0.7;
+}
+
+.endevent {
+	border-bottom: 2px solid black;
+	margin-bottom: 30px;
+}
+
+.endevent, th, td{
+	text-align: center;
+	display: box;
+	margin: auto;
+	padding: 5px;
+	vertical-align: middle;
+}
+
+.eventimages {
+	width: 100%;
+	height: 200px;
+}
+
 </style>
+<script type="text/javascript">
+function end(){
+	alert("종료된 이벤트입니다!");
+}
+</script>
 </head>
 <body>
 
-<div data-role="page" id="#home" data-theme="a">
+<div data-role="page" id="home" data-theme="a">
 	<div data-role="header" data-position="fixed" data-theme="a">
-		<a href="#home" data-role="button" data-icon="home" data-iconpos="notext">홈</a>
+		<a href="index.html" data-role="button" data-icon="home" data-iconpos="notext" data-ajax="false">홈</a>
 		<h1>커스텀 피자</h1>
-		<a href="#sidebar" data-role="button" data-icon="bars" data-iconpos="notext" data-position="right">메뉴</a>
+		<a href="#sidebar" data-role="button" data-icon="bars" data-iconpos="notext" data-position="right" data-ajax="false">메뉴</a>
 		<div data-role="panel" id="sidebar" data-display="overlay" data-position="right" style="text-align: center;">
 			<h3>전체 메뉴</h3>
 			<ul data-role="listview" data-inset="true">
@@ -127,7 +159,7 @@ li:hover {
 
 <div data-role="page" id="pizza" data-theme="a" data-fullscreen="true">
 	<div data-role="header" data-position="fixed" data-theme="a">
-		<a href="#home" data-role="button" data-icon="home" data-iconpos="notext" data-rel="back">홈</a>
+		<a href="index.html" data-role="button" data-icon="home" data-iconpos="notext" data-ajax="false">홈</a>
 		<h1>피자 주문</h1>
 		<a href="#sidebar" data-role="button" data-icon="bars" data-iconpos="notext" data-position="right">메뉴</a>
 		<div data-role="panel" id="sidebar" data-display="overlay" data-position="right" style="text-align: center;">
@@ -164,7 +196,7 @@ li:hover {
 
 <div data-role="page" id="side" data-theme="a" data-fullscreen="true">
 	<div data-role="header" data-position="fixed" data-theme="a">
-		<a href="#home" data-role="button" data-icon="home" data-iconpos="notext" data-rel="back">홈</a>
+		<a href="index.html" data-role="button" data-icon="home" data-iconpos="notext" data-ajax="false">홈</a>
 		<h1>피자 주문</h1>
 		<a href="#sidebar" data-role="button" data-icon="bars" data-iconpos="notext" data-position="right">메뉴</a>
 		<div data-role="panel" id="sidebar" data-display="overlay" data-position="right" style="text-align: center;">
@@ -310,9 +342,71 @@ li:hover {
 	</div>
 </div><!-- side -->
 
+<div data-role="page" id="event" data-theme="a" data-fullscreen="true">
+	<div data-role="header" data-position="fixed" data-theme="a">
+		<a href="index.html" data-role="button" data-icon="home" data-iconpos="notext" data-ajax="false">홈</a>
+		<h1>이벤트</h1>
+		<a href="#sidebar" data-role="button" data-icon="bars" data-iconpos="notext" data-position="right">메뉴</a>
+		<div data-role="panel" id="sidebar" data-display="overlay" data-position="right" style="text-align: center;">
+			<h3>전체 메뉴</h3>
+			<ul data-role="listview" data-inset="true">
+				<li><a href="#pizza" >&nbsp;피자 주문&nbsp;</a></li>
+				<li><a href="#side">&nbsp;사이드 메뉴&nbsp;</a></li>
+				<li><a href="#event" style="text-decoration: underline;">&nbsp;이벤트&nbsp;</a></li>
+				<li><a href="#location">&nbsp;매장위치&nbsp;</a></li>
+				<li><a href="#product">&nbsp;원산지&nbsp;</a></li>
+			</ul>
+			<a href="#event" data-role="button" data-rel="close" data-inline="true" 
+			data-icon="delete" data-iconpos="notext">닫기</a>
+		</div>
+	</div>
+	
+	
+	<div data-role="content" style="text-align: center;" data-theme="a" >
+		<h1 style="font-size: 200%">이벤트</h1><br>
+		
+		<div data-role="collapsible-set" data-theme="a" data-content-theme="a">
+		<div data-role="collapsible" data-collapsed="false">
+			<h3>진행중인 이벤트</h3>
+			<p>진행중인 이벤트가 없습니다.</p>
+		</div>
+		<div data-role="collapsible">
+			<h3>종료된 이벤트</h3>
+			<table class="endevent">
+				<tr>
+					<td><input type="image" src="images/event1.jpg" onclick="end()" class="eventimages"></td>
+				</tr>
+				<tr>
+					<th>커스텀 피자 인증샷 이벤트!</th>
+				</tr>
+				<tr>
+					<td>2019-02-01 ~ 2018-03-31</td>
+				</tr>
+			</table>
+			<table class="endevent">
+				<tr>
+					<td><input type="image" src="images/event.jpg" onclick="end()" class="eventimages" ></td>
+				</tr>
+				<tr>
+					<th>커스텀 피자 오픈 기념 3000원 할인 이벤트!</th>
+				</tr>
+				<tr>
+					<td>2018-11-30 ~ 2019-01-31</td>
+				</tr>
+			</table>
+		</div>
+		</div>
+
+	</div>
+
+	<div data-role="footer" data-position="fixed" data-theme="a">
+		<h1>전화 주문 : 1588-9999</h1>
+	</div>
+</div><!-- event -->
+
 <div data-role="page" id="location" data-theme="a" data-fullscreen="true">
 	<div data-role="header" data-position="fixed" data-theme="a">
-		<a href="#home" data-role="button" data-icon="home" data-iconpos="notext" data-rel="back">홈</a>
+		<a href="index.html" data-role="button" data-icon="home" data-iconpos="notext" data-ajax="false">홈</a>
 		<h1>매장 위치</h1>
 		<a href="#sidebar" data-role="button" data-icon="bars" data-iconpos="notext" data-position="right">메뉴</a>
 		<div data-role="panel" id="sidebar" data-display="overlay" data-position="right" style="text-align: center;">
@@ -344,19 +438,20 @@ li:hover {
 
 <div data-role="page" id="product" data-theme="a" data-fullscreen="true">
 	<div data-role="header" data-position="fixed" data-theme="a">
-		<a href="#home" data-role="button" data-icon="home" data-iconpos="notext" data-rel="back">홈</a>
+		<a href="index.html" data-role="button" data-icon="home" data-iconpos="notext" data-ajax="false">홈</a>
 		<h1>원산지</h1>
 		<a href="#sidebar" data-role="button" data-icon="bars" data-iconpos="notext" data-position="right">메뉴</a>
 		<div data-role="panel" id="sidebar" data-display="overlay" data-position="right" style="text-align: center;">
 			<h3>전체 메뉴</h3>
 			<ul data-role="listview" data-inset="true">
-				<li><a href="#pizza" >&nbsp;피자 주문&nbsp;</a></li>
+				<li><a href="#pizza">&nbsp;피자 주문&nbsp;</a></li>
 				<li><a href="#side">&nbsp;사이드 메뉴&nbsp;</a></li>
 				<li><a href="#event">&nbsp;이벤트&nbsp;</a></li>
 				<li><a href="#location">&nbsp;매장위치&nbsp;</a></li>
 				<li><a href="#product" style="text-decoration: underline;">&nbsp;원산지&nbsp;</a></li>
 			</ul>
-			<a href="#product" data-role="button" data-inline="true" data-icon="delete" data-iconpos="notext">닫기</a>
+			<a href="#product" data-role="button" data-inline="true" data-icon="delete" 
+			data-iconpos="notext" data-rel="close">닫기</a>
 		</div>
 	</div>
 
@@ -367,16 +462,19 @@ li:hover {
 			<br>
 			<br>
 
-			<table class="product">
+			<table class="ui-responsive table-stripe" id="product" data-mode="columntoggle" data-role="table">
+			<thead>
 				<tr>
 					<th>제품명</th>
-					<th>원산지</th>
-					<th>열량(kcal/1회분)</th>
-					<th>단백질(g/1회분)</th>
-					<th>포화지방(g/1회분)</th>
-					<th>나트륨(mg/1회분)</th>
-					<th>당류(g/1회분)</th>
+					<th data-priority="1">원산지</th>
+					<th data-priority="2">열량(kcal/1회분)</th>
+					<th data-priority="3">단백질(g/1회분)</th>
+					<th data-priority="4">포화지방(g/1회분)</th>
+					<th data-priority="5">나트륨(mg/1회분)</th>
+					<th data-priority="6">당류(g/1회분)</th>
 				</tr>
+			</thead>
+			<tbody>
 				<tr>
 					<td>양파</td>
 					<td>국내산</td>
@@ -503,6 +601,7 @@ li:hover {
 					<td>1500</td>
 					<td>1</td>
 				</tr>
+			</tbody>
 			</table>
 		</div>
 
